@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web to EPUB Converter</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Web-to-epub</h1>
+            <p>Convert web articles to EPUB format for your e-reader</p>
+        </header>
+
+        <main>
+            <div class="input-section">
+                <form id="urlForm">
+                    <div class="input-group">
+                        <input 
+                            type="url" 
+                            id="urlInput" 
+                            placeholder="Enter article URL (e.g., https://example.com/article)"
+                            required
+                        >
+                        <button type="submit" id="previewBtn">
+                            <span class="btn-text">Preview</span>
+                            <span class="spinner" style="display: none;"></span>
+                        </button>
+                    </div>
+                </form>
+            </div>
+
+            <div id="errorMessage" class="error" style="display: none;"></div>
+
+            <div id="previewSection" class="preview-section" style="display: none;">
+                <div class="preview-header">
+                    <div class="article-meta">
+                        <h2 id="articleTitle"></h2>
+                        <p id="articleByline"></p>
+                        <div class="stats">
+                            <span id="wordCount"></span> • <span id="readingTime"></span>
+                        </div>
+                    </div>
+                    <button id="downloadBtn" class="download-btn">
+                        <span class="btn-text">Download EPUB</span>
+                        <span class="spinner" style="display: none;"></span>
+                    </button>
+                </div>
+                
+                <div class="preview-content">
+                    <div id="articleContent"></div>
+                </div>
+            </div>
+        </main>
+
+        <footer>
+            <p>No images or ads • Clean reading experience</p>
+        </footer>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>

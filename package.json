@@ -1,0 +1,21 @@
+{
+  "name": "web-to-epub",
+  "version": "1.0.0",
+  "type": "module",
+  "dependencies": {
+    "@mozilla/readability": "^0.4.4",
+    "jsdom": "^22.1.0",
+    "archiver": "^6.0.1",
+    "express": "^4.18.2",
+    "cors": "^2.8.5"
+  },
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node server.js",
+    "build": "echo 'No build step required'",
+    "vercel-build": "echo 'No build step required'"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  }
+}
